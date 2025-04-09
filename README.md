@@ -1,54 +1,72 @@
-# React + TypeScript + Vite
+# YouTube Video Note Taker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+YouTube Video Note Taker is a web application that allows users to take notes while watching YouTube videos. It provides features to add, edit, and delete notes associated with specific timestamps in a video.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Note Management**: Add, edit, and delete notes for specific YouTube videos.
+- **Timestamped Notes**: Notes are linked to specific timestamps in the video for easy reference.
+- **Local Storage**: Notes are saved in the browser's local storage, ensuring persistence across sessions.
+- **Responsive Design**: The application is designed to work seamlessly across devices.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: For building the user interface.
+- **TypeScript**: For type-safe development.
+- **SCSS**: For styling components.
+- **Local Storage**: For storing notes data.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Usage
+
+1. Enter a YouTube video ID to load the video.
+2. Use the note-taking interface to add notes at specific timestamps.
+3. Edit or delete notes as needed.
+4. Notes are automatically saved to local storage.
+
+## Folder Structure
+
+```
+src/
+├── components/
+│   ├── atoms/
+│   ├── molecules/
+│   │   └── NotesDisplay/
+│   └── organisms/
+├── lib/
+│   ├── hooks/
+│   └── helpers/
+├── styles/
+└── App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **components**: Contains reusable UI components.
+- **lib**: Contains custom hooks and helper functions.
+- **styles**: Contains global and component-specific styles.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Contributing
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add feature-name"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Inspired by the need to take timestamped notes while watching educational YouTube videos.
+- Built with ❤️ by Rabdeep singh kharbanda.
