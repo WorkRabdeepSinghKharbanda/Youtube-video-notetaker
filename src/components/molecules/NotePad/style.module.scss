@@ -1,0 +1,29 @@
+.notepad-container {
+    margin-top: 2rem;
+    background: var(--bg-light);
+    color: var(--text-light);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+    width: 100%;
+    animation: fadeSlideUp 0.5s ease;
+}
+.notepad-container label {
+    color: var(--text-light);
+}
+
+.notepad-container:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* ------------------ Animation ------------------ */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

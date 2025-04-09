@@ -1,0 +1,95 @@
+:root {
+  --bg-dark: #0d0d0d;
+  --panel-dark: rgba(20, 20, 20, 0.7);
+  --text-dark: #f5f5f5;
+  --primary-dark: #00ffff;
+  --secondary-dark: #bf00ff;
+
+  --bg-light: #f9f9f9;
+  --panel-light: #ffffff;
+  --text-light: #111;
+  --primary-light: #111;
+}
+
+body {
+  background: #0d0d0d !important;
+  font-family: "Poppins", sans-serif;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 2rem;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+  
+  /* Labels */
+  label {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #cbd5e1;
+  }
+
+
+
+/* ------------------ Layout ------------------ */
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  color: #111;
+  box-shadow: inset 0 0 0 2px #4ade80;
+  transition: 0.3s ease;
+}
+
+label {
+  color: #111;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #22d3ee;
+}
+
+/* Submit button */
+button,
+input[type="submit"] {
+  color: #111;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  transform: scale(1.03);
+}
+
+
+/* ------------------ Scrollbar ------------------ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-dark);
+  border-radius: 10px;
+}
